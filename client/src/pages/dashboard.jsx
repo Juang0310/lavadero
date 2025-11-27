@@ -29,7 +29,7 @@ const Dashboard = ({ user, token, onLogout }) => {
       {/* CONTENEDOR PRINCIPAL */}
       <div
         style={{
-          minHeight: "100vh", // <-- PERMITE CRECER, NO CORTA NADA
+          minHeight: "100vh", // 
           width: "100vw",
           display: "flex",
           flexDirection: "column",
@@ -85,7 +85,7 @@ const Dashboard = ({ user, token, onLogout }) => {
                     ? `http://localhost:3000/uploads/${userData.foto}`
                     : "/default-avatar.png"
                 }
-                alt="Foto perfil"
+                alt="Foto de perfil"
                 style={{
                   width: "90px",
                   height: "90px",
@@ -112,15 +112,15 @@ const Dashboard = ({ user, token, onLogout }) => {
               }}
             >
               <button style={botonEstilo} onClick={() => setView("inicio")}>
-                Inicio
+                pagina principal
               </button>
 
               <button style={botonEstilo} onClick={() => setView("agendamientos")}>
-                Mis Agendamientos
+                Mis reservas
               </button>
 
               <button style={botonEstilo} onClick={() => setView("perfil")}>
-                Perfil
+                mi Perfil
               </button>
 
               <button style={botonEstilo} onClick={onLogout}>
@@ -129,29 +129,29 @@ const Dashboard = ({ user, token, onLogout }) => {
             </div>
           </aside>
 
-          {/* MAIN CONTENT — SCROLL REAL */}
+          {/* MAIN */}
           <main
             style={{
               flex: 1,
-              backgroundColor: "#11c7e7ff",
+              backgroundColor: "#2b2b2bff",
               padding: "40px",
-              overflowY: "auto",  // <-- SCROLL SUAVE 
-              maxHeight: "200%",   // <-- NO SE CORTA
+              overflowY: "auto",  
+              maxHeight: "200%",   
             }}
           >
             {view === "inicio" && (
               <>
-                <h2 style={{ color: "#000" }}>¡Bienvenido a freshcar!</h2>
+                <h2 style={{ color: "#00ddffff" }}>¡Bienvenido a freshcar!</h2>
 
                 <div style={{ display: "flex", gap: "20px" }}>
                   <div style={cardEstilo} onClick={() => setShowForm(true)}>
                     <p style={{ fontSize: "40px" }}>🚘</p>
-                    <h3>Agendar Vehículo</h3>
+                    <h3>Agendar Lavado de vehiculo</h3>
                   </div>
 
                   <div style={cardEstilo} onClick={() => setView("agendamientos")}>
                     <p style={{ fontSize: "40px" }}>📋</p>
-                    <h3>Mis Agendamientos</h3>
+                    <h3>Mirar mis reservas</h3>
                   </div>
                 </div>
               </>

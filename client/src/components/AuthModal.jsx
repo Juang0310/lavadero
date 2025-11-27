@@ -19,15 +19,13 @@ const AuthModal = ({ onClose, onAuthSuccess }) => {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  // 🚀 REGISTRO O LOGIN
+  // REGISTRO O LOGIN
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMensaje("");
 
     if (!isLogin) {
-      // -----------------------------
-      // 🟡 REGISTRO
-      // -----------------------------
+      
       try {
         const res = await fetch("http://localhost:3000/api/registro", {
           method: "POST",
@@ -55,9 +53,6 @@ const AuthModal = ({ onClose, onAuthSuccess }) => {
       return;
     }
 
-    // -----------------------------
-    // 🔵 LOGIN
-    // -----------------------------
     try {
       const res = await fetch("http://localhost:3000/api/login", {
         method: "POST",
@@ -90,9 +85,6 @@ const AuthModal = ({ onClose, onAuthSuccess }) => {
     }
   };
 
-  // ------------------------------------
-  // 🟢 VERIFICAR CÓDIGO
-  // ------------------------------------
   const verificarCodigo = async () => {
     try {
       const res = await fetch("http://localhost:3000/api/verificar", {
@@ -121,9 +113,6 @@ const AuthModal = ({ onClose, onAuthSuccess }) => {
     }
   };
 
-  // ------------------------------------
-  // 📌 JSX
-  // ------------------------------------
   return (
     <div className="modal-overlay">
       <div className="modal">

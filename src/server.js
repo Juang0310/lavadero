@@ -48,11 +48,11 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api", verifyRoutes);
 
-// Test de BD
+// BD
 (async () => {
   try {
     await db.getConnection();
-    console.log("✅ Conectado a la base de datos");
+    console.log(" Conectado a la base de datos");
   } catch (err) {
     console.error("❌ Error de conexión:", err.message);
     process.exit(1);
@@ -61,5 +61,5 @@ app.use("/api", verifyRoutes);
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+  console.log(` Servidor corriendo en http://localhost:${PORT}`);
 });

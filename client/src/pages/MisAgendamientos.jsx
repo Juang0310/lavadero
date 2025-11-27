@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const MisAgendamientos = ({ userId, token }) => {
   const [agendas, setAgendas] = useState([]);
-  const [editData, setEditData] = useState(null); // 👉 datos del agendamiento a editar
+  const [editData, setEditData] = useState(null); // datos del agendamiento a editar
   const [nuevaFecha, setNuevaFecha] = useState("");
   const [nuevaHora, setNuevaHora] = useState("");
 
@@ -28,7 +28,7 @@ const MisAgendamientos = ({ userId, token }) => {
   }, []);
 
   // ===============================
-  // 🟦 ELIMINAR AGENDAMIENTO
+  // ELIMINAR AGENDAMIENTO
   // ===============================
   const cancelarAgendamiento = async (id) => {
     if (!confirm("¿Seguro que deseas cancelar este agendamiento?")) return;
@@ -47,7 +47,6 @@ const MisAgendamientos = ({ userId, token }) => {
     }
   };
 
-  // ===============================
   //  ABRIR MODAL DE EDICIÓN
   const abrirEditar = (a) => {
     setEditData(a);
@@ -55,7 +54,6 @@ const MisAgendamientos = ({ userId, token }) => {
     setNuevaHora(a.hora);
   };
 
-  // ===============================
   // GUARDAR CAMBIOS DE EDICIÓN
 
   const guardarEdicion = async () => {
@@ -123,9 +121,9 @@ const MisAgendamientos = ({ userId, token }) => {
         ))}
       </div>
 
-      {/* ===============================
+      {/* 
            MODAL PARA EDITAR
-      =============================== */}
+      */}
       {editData && (
         <div style={overlay}>
           <div style={modal}>
@@ -161,7 +159,7 @@ const MisAgendamientos = ({ userId, token }) => {
   );
 };
 
-/* =========== ESTILOS =========== */
+/*ESTILOS*/
 
 const box = {
   width: "80%",

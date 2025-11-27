@@ -10,7 +10,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState(null);
 
-  // 👇 NUEVO: para mostrar HomePublic sin dañar nada
   const [showHome, setShowHome] = useState(false);
 
   // Si está en HomePublic → mostrar solo esa vista
@@ -26,13 +25,12 @@ function App() {
         <>
           <img
             src="/logo.png"
-            alt="Logo Parking Now"
+            alt="Logo Fresh car"
             style={{ height: "100px", marginBottom: "20px" }}
           />
 
-          <h1>Bienvenido a Parking Now</h1>
+          <h1>Bienvenido a Fresh car</h1>
 
-          {/* 🟡 NUEVO BOTÓN PARA ABRIR HOME PÚBLICO */}
           <button
             onClick={() => setShowHome(true)}
             style={{
@@ -40,10 +38,10 @@ function App() {
               padding: "12px 25px",
               fontSize: "16px",
               borderRadius: "8px",
-              border: "2px solid #FFD700",
+              border: "2px solid #00a2ffff",
               cursor: "pointer",
               backgroundColor: "transparent",
-              color: "#FFD700",
+              color: "#00ffd9ff",
               fontWeight: "bold",
             }}
           >

@@ -97,7 +97,7 @@ const input = {
 };
 
 const btnGuardar = {
-  background: "#FFD700",
+  background: "#00eaffff",
   border: "none",
   padding: "12px",
   fontWeight: "bold",

@@ -22,7 +22,7 @@ const FormVehiculo = ({ onClose, userId, token }) => {
     try {
       console.log("Enviando vehículo:", form);
 
-      // 1️⃣ Crear vehículo
+      // Crear vehículo
       const resVeh = await fetch("http://localhost:3000/api/vehiculos", {
         method: "POST",
         headers: {
@@ -42,7 +42,7 @@ const FormVehiculo = ({ onClose, userId, token }) => {
 
       const idVehiculo = dataVeh.idVehiculo;
 
-      // 2️⃣ Crear agendamiento
+      // Crear agendamiento
       const agendamientoData = {
         idVehiculo,
         idPersona: userId,
@@ -88,7 +88,7 @@ const FormVehiculo = ({ onClose, userId, token }) => {
       <form
         onSubmit={handleSubmit}
         style={{
-          backgroundColor: "#fff",
+          backgroundColor: "#323232ff",
           padding: "30px",
           borderRadius: "10px",
           minWidth: "400px",
@@ -97,22 +97,22 @@ const FormVehiculo = ({ onClose, userId, token }) => {
           gap: "15px",
         }}
       >
-        <h2>Registrar Vehículo</h2>
+        <h2>¡Registra tu Vehículo!</h2>
 
-        <input name="placa" placeholder="Placa" value={form.placa} onChange={handleChange} required />
-        <input name="nombre" placeholder="Nombre del propietario" value={form.nombre} onChange={handleChange} required />
-        <input name="tipo_vehiculo" placeholder="Tipo de vehículo" value={form.tipo_vehiculo} onChange={handleChange} required />
-        <input name="telefono" placeholder="Teléfono" value={form.telefono} onChange={handleChange} required />
+        <input name="placa" placeholder="Placa del vehiculo" value={form.placa} onChange={handleChange} required />
+        <input name="nombre" placeholder="Nombre del dueño" value={form.nombre} onChange={handleChange} required />
+        <input name="tipo_vehiculo" placeholder="Tipo de vehículo (carro o moto)" value={form.tipo_vehiculo} onChange={handleChange} required />
+        <input name="telefono" placeholder="Teléfono de contacto" value={form.telefono} onChange={handleChange} required />
         <input type="date" name="fecha_ingreso" value={form.fecha_ingreso} onChange={handleChange} required />
-        <input name="servicios" placeholder="Servicios (opcional)" value={form.servicios} onChange={handleChange} />
+        <input name="servicios" placeholder="preferencias (opcional)" value={form.servicios} onChange={handleChange} />
 
-        <h3>Agendamiento</h3>
+        <h3>Agendar</h3>
 
         <input type="date" name="fecha" value={form.fecha} onChange={handleChange} required />
         <input type="time" name="hora" value={form.hora} onChange={handleChange} required />
 
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <button type="submit" style={{ padding: "10px", background: "#FFD700", borderRadius: "8px", border: "none", cursor: "pointer" }}>
+          <button type="submit" style={{ padding: "10px", background: "#00fffbff", borderRadius: "8px", border: "none", cursor: "pointer" }}>
             Guardar
           </button>
           <button type="button" onClick={onClose} style={{ padding: "10px", background: "#ccc", borderRadius: "8px", border: "none", cursor: "pointer" }}>

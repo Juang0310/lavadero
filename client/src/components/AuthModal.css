@@ -5,11 +5,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* oscurece el fondo */
+  background-color: rgba(0, 0, 0, 0.8); 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* asegúrate de que quede sobre todo */
+  z-index: 1000;
 }
 
 /* Contenedor del modal */
@@ -21,8 +21,8 @@
   width: 350px;
   max-width: 90%;
   text-align: center;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  border: 2px solid #00eeff;
+  box-shadow: 0 0 15px rgba(0, 93, 71, 0.3);
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -32,7 +32,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #FFD700;
+  background: #00ffea;
   border: none;
   border-radius: 50%;
   width: 28px;
@@ -43,7 +43,7 @@
 
 /* Botones principales */
 .btn-primary {
-  background-color: #FFD700;
+  background-color: #00c3ff;
   color: #000;
   font-weight: bold;
   border: none;
@@ -55,7 +55,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #e6c200;
+  background-color: #00fff2;
 }
 
 /* Inputs */
@@ -78,6 +78,6 @@
 /* Mensajes */
 .mensaje {
   margin-top: 10px;
-  color: #FFD700;
+  color: #00ffff;
   font-weight: bold;
 }
